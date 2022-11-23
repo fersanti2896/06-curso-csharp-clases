@@ -1,15 +1,17 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Clases.Clases;
 
-Console.WriteLine("Hello, World!");
+Console.WriteLine("¡Clases!\n");
 
-Persona ConstruirPersona(string nombre, string apellido, DateTime fechaNac) {
-    var persona = new Persona();
-    persona._nombre = nombre;
-    persona._apellido = apellido;
-    persona._fechaNacimiento = fechaNac;
+var carro1 = new Carro();
+//carro1.Marca = "Volvo";
+carro1.Anio = 2020;
 
-    return persona;
-}
+Console.WriteLine($"{ carro1.NombreComercial } Kilometraje: { carro1.Kilometraje }");
 
-Console.WriteLine(ConstruirPersona("Fer", "Santi", new DateTime(1996, 12, 16)));
+carro1.Acelear();
+//carro1.Detener();   
+
+Console.WriteLine($"{ carro1.NombreComercial } Kilometraje: { carro1.Kilometraje }");
+
+Console.WriteLine(carro1.Marca);
