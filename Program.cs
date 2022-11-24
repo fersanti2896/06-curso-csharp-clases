@@ -18,6 +18,19 @@ Console.WriteLine(carro1.Marca);
 var calculadora = new Calculadora();
 var resultadoDT = calculadora.CalcularDuploTriplo(5);
 
-Console.WriteLine($"El valor es: { resultadoDT.Valor }");
-Console.WriteLine($"El duplo es: { resultadoDT.Duplo }");
-Console.WriteLine($"El triplo es: { resultadoDT.Triplo }");
+/* Ejemplo 1: Sin deconstructor */
+var valor = resultadoDT.Valor;
+var duplo = resultadoDT.Duplo;
+var triplo = resultadoDT.Triplo;    
+
+Console.WriteLine($"El valor es: { valor }");
+Console.WriteLine($"El duplo es: { duplo }");
+Console.WriteLine($"El triplo es: { triplo }");
+
+/* Ejemplo 2: Con deconstructor */
+int valor2, duplo2, triplo2;
+resultadoDT.Deconstructor(out valor2, out duplo2, out triplo2);
+
+Console.WriteLine($"El valor es: { valor2 }");
+Console.WriteLine($"El duplo es: { duplo2 }");
+Console.WriteLine($"El triplo es: { triplo2 }");
