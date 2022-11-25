@@ -12,6 +12,7 @@ namespace Clases.Clases {
         public Carro() {
             Console.WriteLine("Instanciando un carro");
             _marca = String.Empty;
+            ConteoInstancia++;
         }
 
         /* Campo de lectura y escritura */
@@ -26,6 +27,7 @@ namespace Clases.Clases {
         internal int Kilometraje { get; private set; } = 20;
         private int KilometrajeMax => 120;
         internal string NombreComercial => $"Marca: { Marca } Anio: { Anio }";
+        public static int ConteoInstancia { get; set; }
 
         internal void Acelear() {
             Acelear(100);
