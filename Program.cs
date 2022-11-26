@@ -54,3 +54,22 @@ Console.WriteLine($"Cantidad de palabras { cantidadMsg } ");
 /* Sin usar método de extensión */
 var cantidadMsg2 = Extensiones.ContarPalabras(msg);
 Console.WriteLine($"Cantidad de palabras { cantidadMsg2 } ");
+
+/* TIPOS ANÓNIMOS */
+
+/* Clase normal */
+var coche = new Carro() { Marca = "Yoyota", Anio = 2022 };
+
+/* Tipo anónimo (clase sin nombre) */
+var persona = new { Nombre = "Marisol", Apellido = "Contreras", Edad = 25 };
+Console.WriteLine($"Persona { persona }");
+
+/* Agregando propiedades o inferiendo nombres de propiedades */
+var duenio = "Fer Santi";
+var cochePersonalizado = new { coche.Marca, coche.Anio, duenio };
+
+Console.WriteLine($"Carro anónimo: { cochePersonalizado }");
+
+/* Mutación no destructiva */
+var personaMutada = persona with { Apellido = "Contreras de Nicolás" };
+Console.WriteLine($"{ personaMutada }");
