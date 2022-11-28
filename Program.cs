@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Clases.Clases;
+using Clases.Struct;
 
 Console.WriteLine("¡Clases!\n");
 
@@ -73,3 +74,6 @@ Console.WriteLine($"Carro anónimo: { cochePersonalizado }");
 /* Mutación no destructiva */
 var personaMutada = persona with { Apellido = "Contreras de Nicolás" };
 Console.WriteLine($"{ personaMutada }");
+
+/* Struct: Tipo de valor */
+var puntoA = new Punto(10, 5);
