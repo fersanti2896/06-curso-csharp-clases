@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using Clases.Clases;
+using Clases.Records;
 using Clases.Struct;
 
 Console.WriteLine("¡Clases!\n");
@@ -77,3 +78,28 @@ Console.WriteLine($"{ personaMutada }");
 
 /* Struct: Tipo de valor */
 var puntoA = new Punto(10, 5);
+
+/* Record Nominal */
+var personaRec = new Clases.Records.Persona() { Nombre = "Fer", Apellido = "Santi" };
+var persona2Rec = new Clases.Records.Persona() { Nombre = "Fer", Apellido = "Santi" };
+
+var iguales = personaRec == persona2Rec;
+Console.WriteLine($"¿Son iguales? { iguales }");
+
+/* Record Posicionales - Son inmutables */
+var empresa = new Empresa("Grupo Fersa", 2023);
+var (nombre, anio) = empresa;
+
+Console.WriteLine($"Empresa: { nombre } | Año de Fundación: { anio }");
+
+/* Clonando Records - Mutación No-Destructiva */
+var empresa2 = empresa with { AnioFundacion = 2022 };
+var (nombre2, anio2) = empresa2;
+Console.WriteLine($"Empresa: { nombre2 } | Año de Fundación: { anio2 }");
+
+/* Propiedades inmutables en clases */
+var clase = new Inmutables() {
+    Prop1 = 23,
+    Prop2 = "Santi",
+    Prop3 = true
+};
