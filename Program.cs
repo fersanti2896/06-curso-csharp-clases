@@ -115,3 +115,5 @@ numeros ??= new int[] { };
 Console.WriteLine($"¿Es nulo?: { numeros is null }");
 Console.WriteLine($"¿Es un arreglo vacío?: { numeros?.Length == 0 }");
 
+/* Perdonando nulo y nameof */
+Persona2.Procesar(null!);
