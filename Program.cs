@@ -103,3 +103,15 @@ var clase = new Inmutables() {
     Prop2 = "Santi",
     Prop3 = true
 };
+
+/* Operador Elvis ? */
+int[]? numeros = { 1, 2, 3 };
+numeros = null;
+
+Console.WriteLine($"La longitud es: { numeros?.Length }");
+
+/* Operador Coalescencia Nula ?? */
+numeros ??= new int[] { };
+Console.WriteLine($"¿Es nulo?: { numeros is null }");
+Console.WriteLine($"¿Es un arreglo vacío?: { numeros?.Length == 0 }");
+
